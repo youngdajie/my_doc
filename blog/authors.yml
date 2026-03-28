@@ -1,0 +1,10 @@
+JIE:
+  name: JIE
+  title: Yang Jie
+  url: https://www.yangjie.site
+  image_url: https://q.qlogo.cn/g?b=qq&nk=434871910&s=640
+  page: true
+  socials:
+    # 格式：图标名: "链接"
+    x: "https://x.com/youngdajie"
+    github: "https://github.com/youngdajie" # 建议写全链接更稳妥
