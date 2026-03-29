@@ -20,7 +20,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/">
+            to="/docs/欢迎">
             什么东西都往里面塞️
           </Link>
         </div>

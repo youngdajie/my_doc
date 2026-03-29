@@ -68,6 +68,16 @@ const config : Config = {
 		],
 	],
 	themeConfig: {
+		headTags: [
+			{
+				// 插入 link 标签，加载霞鹜文楷字体
+				tagName: 'link',
+				attributes: {
+					rel: 'stylesheet',
+					href: 'https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css',
+				},
+			},
+		],
 		// Replace with your project's social card
 		image: 'img/docusaurus-social-card.jpg',
 		colorMode: {
@@ -86,7 +96,7 @@ const config : Config = {
 					position: 'left',
 					label: '文档导航',
 				},
-				{ to: '/blog', label: '杂文', position: 'left' },
+				// { to: '/blog', label: '杂文', position: 'left' },
 				{
 					href: 'https://github.com/youngdajie/my_doc',
 					label: 'GitHub',
@@ -98,7 +108,7 @@ const config : Config = {
 			style: 'dark',
 			links: [
 				{
-					title: '页脚',
+					title: '站长',
 					items: [
 						{
 							label: '小杰主页',
