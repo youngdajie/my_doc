@@ -34,7 +34,19 @@ const config : Config = {
 		defaultLocale: 'zh-Hans',
 		locales: ['zh-Hans'],
 	},
-
+	plugins: [
+		[
+			'@easyops-cn/docusaurus-search-local',
+			{
+				// 插件选项（根据你的需求调整）
+				indexDocs: true,
+				indexBlog: false,
+				language: ["zh", "en"],
+				hashed: true,
+				docsDir: ['docs'],
+			},
+		],
+	],
 	presets: [
 		[
 			'classic',
@@ -43,6 +55,7 @@ const config : Config = {
 					sidebarPath: './sidebars.ts',
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
+					sidebarCollapsed: false, // 👈 关键：设为 false 表示默认展开
 					editUrl:
 						'https://github.com/youngdajie/my_doc/blob/main/',
 				},
@@ -68,16 +81,6 @@ const config : Config = {
 		],
 	],
 	themeConfig: {
-		headTags: [
-			{
-				// 插入 link 标签，加载霞鹜文楷字体
-				tagName: 'link',
-				attributes: {
-					rel: 'stylesheet',
-					href: 'https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css',
-				},
-			},
-		],
 		// Replace with your project's social card
 		image: 'img/docusaurus-social-card.jpg',
 		colorMode: {
@@ -97,11 +100,11 @@ const config : Config = {
 					label: '文档导航',
 				},
 				// { to: '/blog', label: '杂文', position: 'left' },
-				{
-					href: 'https://github.com/youngdajie/my_doc',
-					label: 'GitHub',
-					position: 'right',
-				},
+				// {
+				// 	href: 'https://github.com/youngdajie/my_doc',
+				// 	label: 'GitHub',
+				// 	position: 'right',
+				// },
 			],
 		},
 		footer: {
@@ -142,12 +145,12 @@ const config : Config = {
 						},
 						{
 							label: 'GitHub',
-							href: 'https://github.com/youngdajie',
+							href: 'https://github.com/youngdajie/my_doc',
 						},
 					],
 				},
 			],
-			copyright: `Copyright © ${new Date().getFullYear()} 小杰`,
+			// copyright: `Copyright © ${new Date().getFullYear()} 小杰`,
 		},
 		prism: {
 			theme: prismThemes.github,
